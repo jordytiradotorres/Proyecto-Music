@@ -1,5 +1,6 @@
 import React from "react";
 import foxbelIcon from "../images/foxbel-music.png";
+import Title from "./Title";
 
 const BarNavigation = () => {
   return (
@@ -9,7 +10,7 @@ const BarNavigation = () => {
       </figure>
 
       <div className="BarNavigation__type">
-        <h2>Mi Librería</h2>
+        <Title text="Mi Librería" />
 
         <div>
           <a href="/">Recientes</a>
@@ -21,7 +22,7 @@ const BarNavigation = () => {
       </div>
 
       <div className="BarNavigation__type">
-        <h2>Playlist</h2>
+        <Title text="Playlist" />
 
         <div>
           <a href="/">Metal</a>

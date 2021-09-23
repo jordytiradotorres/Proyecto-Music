@@ -1,5 +1,6 @@
 .App {
   display: grid;
   grid-template-columns: 330px minmax(500px, 970px);
-  grid-auto-rows: 1087px;
+  grid-template-rows: 1087px;
+  position: relative;
 }

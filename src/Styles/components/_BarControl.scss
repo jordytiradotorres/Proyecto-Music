@@ -1,0 +1,91 @@
+.BarControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $red-main;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    color: $white-color;
+
+    figure {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    h5 {
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+
+  &__iconsPlay {
+    display: flex;
+    align-items: center;
+
+    .IconLeft,
+    .IconRight,
+    .IconPlay {
+      font-size: 35px;
+      cursor: pointer;
+
+      svg > path {
+        color: $white-color;
+      }
+    }
+
+    .IconLeft {
+      margin-right: 25px;
+    }
+    .IconRight {
+      margin-left: 25px;
+    }
+    .IconPlay {
+      font-size: 25px;
+      background: $light-red;
+      padding: 0.5rem 0.75rem;
+      border-radius: 50%;
+      text-align: center;
+
+      svg {
+        margin-left: 0.2rem;
+      }
+    }
+  }
+
+  &__iconVolume {
+    display: flex;
+    align-items: center;
+
+    input[type="range"] {
+      width: 100px;
+      height: 6px;
+    }
+
+    span {
+      margin-left: 40px;
+      font-size: 35px;
+      margin-right: 26px;
+
+      svg > path {
+        color: $white-color;
+      }
+    }
+  }
+}

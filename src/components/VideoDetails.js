@@ -1,17 +1,17 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-import VideoCard from "./VideoCard";
+import CardPresentation from "./CardPresentation";
 
-const VideoDetails = () => {
+const VideoDetails = ({ data, display }) => {
   return (
-    <section className="MainContent__videoDetails">
-      <VideoCard display="none" />
+    <section className="MainContent__videoDetails" style={{ display }}>
+      <CardPresentation data={data} />
 
       <div className="Information">
-        <h3>Adele 21</h3>
+        <h3>{data !== null && data[0]?.artist.name}</h3>
         <h5>
-          Lo mejor de Adele <span>321, 123 seguidores</span>
+          Lo mejor de {data !== null && data[0].artist.name}{" "}
+          <span>5000 seguidores</span>
         </h5>
 
         <p>

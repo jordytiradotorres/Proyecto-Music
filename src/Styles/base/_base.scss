@@ -44,11 +44,14 @@ body {
   margin: 0;
   font-family: $font-quicksand;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+
+  @include mq(medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 input {
@@ -82,4 +85,11 @@ input {
   font-size: 22px;
   font-weight: 700;
   color: $white-color;
+}
+
+.withoutResults {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
 }

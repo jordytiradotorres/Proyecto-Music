@@ -19,6 +19,10 @@
       color: $white-color;
       display: block;
       text-decoration: none;
+      background-color: transparent;
+      border: none;
+      font-family: $font-quicksand;
+      cursor: pointer;
     }
   }
 }

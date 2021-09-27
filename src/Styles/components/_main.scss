@@ -1,6 +1,10 @@
 .App {
-  display: grid;
-  grid-template-columns: 330px minmax(500px, 970px);
-  grid-template-rows: 1087px;
   position: relative;
+  display: block;
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: 330px minmax(500px, 970px);
+    grid-template-rows: 1087px;
+  }
 }

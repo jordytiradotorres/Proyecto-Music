@@ -1,22 +1,20 @@
-import BarControl from "./components/BarControl";
-import "./Styles/App.scss";
-import { useRef, useState } from "react";
-import SearchBar from "./components/SearchBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef, useState } from "react";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import VideoDetails from "./components/VideoDetails";
-import VideoResults from "./components/VideoResults";
-import Loader from "./components/Loader";
-import Message from "./components/Message";
-import useFetch from "./hooks/useFetch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SearchBar from "../components/SearchBar";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
+import useFetch from "../hooks/useFetch";
+import VideoDetails from "../components/VideoDetails";
+import VideoResults from "../components/VideoResults";
 
-const App = () => {
+const Albums = () => {
   const [searchText, setSearchText] = useState("");
   const inputSearch = useRef(null);
 
-  let url = `https://api.deezer.com/search?q=${
-    searchText || "adele"
-  }&limit=10&output=jsonp`;
+  let url = `https://api.deezer.com/search?q=album:"${
+    searchText || "21"
+  }"&limit=10&output=jsonp`;
 
   const { data, loading, error } = useFetch(url);
 
@@ -31,14 +29,13 @@ const App = () => {
 
     inputSearch.current.value = "";
   };
-
   return (
     <>
       {loading && <Loader />}
       {error && <Message />}
       <main className="MainContent">
         <header className="MainContent__header">
-          <SearchBar inputSearch={inputSearch} handleForm={handleForm} />
+          <SearchBar handleForm={handleForm} inputSearch={inputSearch} />
 
           <div className="User">
             <span className="User__icon">
@@ -56,9 +53,8 @@ const App = () => {
 
         <VideoResults data={data} />
       </main>
-      <BarControl />
     </>
   );
 };
 
-export default App;
+export default Albums;

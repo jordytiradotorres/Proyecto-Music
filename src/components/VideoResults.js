@@ -1,73 +1,18 @@
-import React from "react";
-import VideoCard from "./VideoCard";
 import Title from "./Title";
+import VideoCard from "./VideoCard";
 
-const VideoResults = () => {
+const VideoResults = ({ data }) => {
   return (
     <>
-      <Title text="Resultados" colorText="#E86060" />
+      {data !== null && data.length !== 0 ? (
+        <Title text="Resultados" colorText="#E86060" />
+      ) : (
+        <Title text="No se encontraron resultados" colorText="#E86060" />
+      )}
 
       <section className="MainContent__videoResults">
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
-        <VideoCard>
-          <div className="Card__body">
-            <h3>Who You Are</h3>
-            <h5>Jessie J</h5>
-          </div>
-        </VideoCard>
+        {data !== null &&
+          data.map((item, index) => <VideoCard item={item} key={index} />)}
       </section>
     </>
   );

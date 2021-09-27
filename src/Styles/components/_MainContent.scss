@@ -1,21 +1,35 @@
 .MainContent {
-  padding: 30px 40px;
+  padding: 1.5rem;
+
+  @include mq(medium) {
+    padding: 30px 40px;
+  }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+
+    @include mq(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     .SearchBar {
       &__field {
         position: relative;
 
         input {
-          width: 524px;
           height: 36px;
           border-radius: 100px;
           border: thin solid $gray-one;
           padding: 0.5rem;
+          width: 100%;
+          margin-bottom: 0.5rem;
+
+          @include mq(medium) {
+            width: 524px;
+            margin-bottom: 0;
+          }
         }
 
         button {
@@ -57,11 +71,14 @@
   }
 
   &__videoDetails {
-    display: flex;
+    display: block;
     margin: 40px 0;
 
+    @media (min-width: 421px) {
+      display: flex;
+    }
+
     .Information {
-      width: 642px;
       color: $white-color;
       padding: 40px 30px 0;
       background: linear-gradient(
@@ -73,6 +90,10 @@
       mix-blend-mode: normal;
       opacity: 0.5;
       // transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      @include mq(medium) {
+        width: 642px;
+      }
 
       h3 {
         font-weight: 700;
@@ -129,6 +150,10 @@
       img {
         width: inherit;
         height: inherit;
+
+        @media (max-width: 420px) {
+          width: 100%;
+        }
       }
     }
 

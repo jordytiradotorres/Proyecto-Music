@@ -56,7 +56,6 @@ const App = () => {
 
         <VideoResults data={data} />
       </main>
-      <BarControl />
     </>
   );
 };

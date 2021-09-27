@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faPlay } from "@fortawesome/free-solid-svg-icons";
 
-const VideoCard = ({ item }) => {
+const VideoCard = ({ item, handleClickSong }) => {
   return (
     <div className="Card">
       <figure className="Card__image">
@@ -9,7 +9,7 @@ const VideoCard = ({ item }) => {
           src={item !== undefined && item?.artist.picture_medium}
           alt="video img"
         />
-        <span className="Card__iconPlay">
+        <span className="Card__iconPlay" onClick={() => handleClickSong(item)}>
           <FontAwesomeIcon icon={faPlay} />
         </span>
         <span className="Card__iconEllipsis">

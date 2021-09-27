@@ -2,12 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
-const CardPresentation = ({ data }) => {
+const VideoPresentation = ({ data }) => {
   return (
     <div className="Card">
       <figure className="Card__image">
         <img
-          src={data !== null && data[0]?.artist.picture_medium}
+          src={data !== null && data[0]?.album.cover_medium}
           alt="video img"
         />
         <span className="Card__iconPlay">
@@ -18,4 +18,4 @@ const CardPresentation = ({ data }) => {
   );
 };
 
-export default CardPresentation;
+export default VideoPresentation;

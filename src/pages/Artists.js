@@ -3,11 +3,12 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchBar from "../components/SearchBar";
 
-import VideoDetails from "../components/VideoDetails";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import VideoResults from "../components/VideoResults";
+
 import useFetch from "../hooks/useFetch";
+import VideoDetails from "./../components/Video/VideoDetails";
+import VideoResults from "./../components/Video/VideoResults";
 
 const Artists = () => {
   const [searchText, setSearchText] = useState("");

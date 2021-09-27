@@ -28,16 +28,11 @@
       font-family: $font-quicksand;
       cursor: pointer;
       position: relative;
+      transition: color 0.2s ease-in-out;
 
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   width: 5px;
-      //   height: 20px;
-      //   background-color: $red-main;
-      //   left: -39px;
-      //   top: 0;
-      // }
+      &:hover {
+        color: $red-main;
+      }
     }
   }
 }

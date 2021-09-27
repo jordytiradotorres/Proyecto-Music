@@ -5,8 +5,9 @@ import SearchBar from "../components/SearchBar";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import useFetch from "../hooks/useFetch";
-import VideoDetails from "../components/VideoDetails";
-import VideoResults from "../components/VideoResults";
+
+import VideoDetails from "./../components/Video/VideoDetails";
+import VideoResults from "./../components/Video/VideoResults";
 
 const Albums = () => {
   const [searchText, setSearchText] = useState("");

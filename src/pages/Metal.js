@@ -1,9 +1,9 @@
 import React from "react";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import VideoDetails from "../components/VideoDetails";
-import VideoResults from "../components/VideoResults";
 import useFetch from "./../hooks/useFetch";
+import VideoDetails from "./../components/Video/VideoDetails";
+import VideoResults from "./../components/Video/VideoResults";
 
 const Metal = () => {
   let url = `https://api.deezer.com/search?q=genre:"metal"&limit=10&output=jsonp`;

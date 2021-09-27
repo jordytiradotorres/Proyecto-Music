@@ -3,11 +3,11 @@ import { useRef, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import VideoDetails from "./components/VideoDetails";
-import VideoResults from "./components/VideoResults";
 import Loader from "./components/Loader";
 import Message from "./components/Message";
 import useFetch from "./hooks/useFetch";
+import VideoDetails from "./components/Video/VideoDetails";
+import VideoResults from "./components/Video/VideoResults";
 
 const App = () => {
   const [searchText, setSearchText] = useState("");

@@ -1,7 +1,7 @@
-import Title from "./Title";
-import VideoCard from "./VideoCard";
-import BarControl from "./BarControl";
+import Title from "../Title";
 import { useRef, useState } from "react";
+import BarControl from "../Bar/BarControl";
+import VideoCard from "./VideoCard";
 
 const VideoResults = ({ data }) => {
   const [currentItem, setCurrentItem] = useState(null);

@@ -1,9 +1,9 @@
 import React from "react";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import VideoDetails from "../components/VideoDetails";
-import VideoResults from "../components/VideoResults";
+import VideoDetails from "../components/Video/VideoDetails";
 import useFetch from "../hooks/useFetch";
+import VideoResults from "./../components/Video/VideoResults";
 
 const Rock = () => {
   let url = `https://api.deezer.com/search?q=genre:"rock"&limit=10&output=jsonp`;

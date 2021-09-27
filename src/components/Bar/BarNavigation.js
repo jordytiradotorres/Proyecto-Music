@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import foxbelIcon from "../images/foxbel-music.png";
-import Title from "./Title";
+import foxbelIcon from "../../images/foxbel-music.png";
+import Title from "../Title";
 
 const BarNavigation = () => {
   return (

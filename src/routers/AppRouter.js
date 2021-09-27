@@ -6,7 +6,6 @@ import {
   Redirect,
 } from "react-router-dom";
 import App from "../App";
-import BarNavigation from "../components/BarNavigation";
 import Artists from "../pages/Artists";
 import Albums from "../pages/Albums";
 import Songs from "../pages/Songs";
@@ -15,6 +14,7 @@ import Metal from "../pages/Metal";
 import Rock from "../pages/Rock";
 import Balads from "../pages/Balads";
 import Dance from "./../pages/Dance";
+import BarNavigation from "./../components/Bar/BarNavigation";
 
 const AppRouter = () => {
   return (

@@ -1,4 +1,3 @@
-import BarControl from "./components/BarControl";
 import "./Styles/App.scss";
 import { useRef, useState } from "react";
 import SearchBar from "./components/SearchBar";

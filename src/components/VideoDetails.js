@@ -4,13 +4,16 @@ import CardPresentation from "./CardPresentation";
 
 const VideoDetails = ({ data, display }) => {
   return (
-    <section className="MainContent__videoDetails" style={{ display }}>
+    <section
+      className="MainContent__videoDetails animate__animated animate__fadeIn"
+      style={{ display }}
+    >
       <CardPresentation data={data} />
 
       <div className="Information">
         <h3>{data !== null && data[0]?.artist.name}</h3>
         <h5>
-          Lo mejor de {data !== null && data[0].artist.name}{" "}
+          Lo mejor de {data !== null && data[0]?.artist.name}{" "}
           <span>5000 seguidores</span>
         </h5>
 

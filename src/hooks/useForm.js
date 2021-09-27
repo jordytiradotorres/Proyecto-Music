@@ -11,7 +11,7 @@ const useForm = () => {
   const handleForm = (e) => {
     e.preventDefault();
 
-    if (inputSearch.current.value.length >= 3) {
+    if (inputSearch.current.value.length >= 2) {
       setSearchText(inputSearch.current.value.toLowerCase().trim());
     } else {
       alert("escribe minimo 3 letras");

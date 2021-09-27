@@ -22,7 +22,7 @@ const VideoResults = ({ data }) => {
         <Title text="No se encontraron resultados" colorText="#E86060" />
       )}
 
-      <section className="MainContent__videoResults">
+      <section className="MainContent__videoResults animate__animated animate__fadeIn">
         {data !== null &&
           data.map((item, index) => (
             <VideoCard

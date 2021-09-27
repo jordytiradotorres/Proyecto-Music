@@ -27,6 +27,17 @@
       border: none;
       font-family: $font-quicksand;
       cursor: pointer;
+      position: relative;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 5px;
+      //   height: 20px;
+      //   background-color: $red-main;
+      //   left: -39px;
+      //   top: 0;
+      // }
     }
   }
 }

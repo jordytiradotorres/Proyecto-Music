@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import foxbelIcon from "../images/foxbel-music.png";
 import Title from "./Title";
 
@@ -16,11 +16,21 @@ const BarNavigation = () => {
         <Title text="Mi Librería" />
 
         <div>
-          <Link to="/">Recientes</Link>
-          <Link to="/artists">Artistas</Link>
-          <Link to="/albums">Albums</Link>
-          <Link to="/songs">Canciones</Link>
-          <Link to="/seasons">Estaciones</Link>
+          <NavLink to="/" activeClassName="active" exact>
+            Recientes
+          </NavLink>
+          <NavLink to="/artists" activeClassName="active" exact>
+            Artistas
+          </NavLink>
+          <NavLink to="/albums" activeClassName="active" exact>
+            Albums
+          </NavLink>
+          <NavLink to="/songs" activeClassName="active" exact>
+            Canciones
+          </NavLink>
+          <NavLink to="/seasons" activeClassName="active" exact>
+            Estaciones
+          </NavLink>
         </div>
       </div>
 
@@ -28,10 +38,18 @@ const BarNavigation = () => {
         <Title text="Playlist" />
 
         <div>
-          <Link to="/metal">Metal</Link>
-          <Link to="/dance">Para Bailar</Link>
-          <Link to="/rock">Rock 90s</Link>
-          <Link to="/balads">Baladas</Link>
+          <NavLink to="/metal" activeClassName="active" exact>
+            Metal
+          </NavLink>
+          <NavLink to="/dance" activeClassName="active" exact>
+            Para Bailar
+          </NavLink>
+          <NavLink to="/rock" activeClassName="active" exact>
+            Rock 90s
+          </NavLink>
+          <NavLink to="/balads" activeClassName="active" exact>
+            Baladas
+          </NavLink>
         </div>
       </div>
     </aside>

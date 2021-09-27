@@ -93,3 +93,17 @@ input {
   font-weight: 700;
   font-size: 2rem;
 }
+
+a.active {
+  color: $red-main !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: $red-main;
+    left: -39px;
+    top: 0;
+  }
+}
